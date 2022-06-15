@@ -10,6 +10,7 @@ class Ball {
   }
   move({ maxX, maxY }) {
     if (this.y === maxY) {
+      stdout.clearScreenDown();
       console.log("game over")
       process.exit(0);
     }
@@ -34,7 +35,7 @@ class Ball {
   }
 
   isPlatFormNear({ x, y, length }) {
-    if (this.x >= x && this.x < (x + length) && this.y + 1 === y) {
+    if (this.x >= x && this.x < (x + length) && this.y + 2 === y) {
       return true;
     }
     return false;

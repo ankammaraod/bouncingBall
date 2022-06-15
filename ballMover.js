@@ -20,9 +20,8 @@ const main = () => {
   platform.draw();
 
   const eventEmitter = new EventEmitter();
-
   eventEmitter.on('a', () => platform.move(-3));
-  eventEmitter.on('s', () => platform.move(3));
+  eventEmitter.on('d', () => platform.move(3));
 
   setInterval(() => {
     if (ball.isPlatFormNear(platform.getPosition())) {
